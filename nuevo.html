@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pollo Mike</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div>
+            <h1 class="apartados">Nuevo apartado</h1>
+
+        </div>
+        <!-- <div>
+            <ul>
+                <ul>
+                    <li><a class="contar" href="./index.html">Inicio</a></li>
+                    <li><a class="contar" href="./contar.html">Contar</a></li>
+                </ul>
+            </ul>
+            
+        </div> -->
+    </header>
+    <hr>
+    <main>
+        <form id="nuevoPedido">
+
+            <section class="comida">
+
+                <div class="comida__seccion">
+                    <label for="pollo">
+                        <span>Pollo</span>
+                        <div class="cantidad">
+                            <input type="number" name="pollo" id="pollo" step="0.5" min="0">
+                        </div>
+                        <div class="sabor">
+                            <input type="checkbox" name="sabor_pollo" id="naturalP">
+                            <span>Natural</span>
+                            <input type="checkbox" name="sabor_pollo" id="bbqP">
+                            <span>BBQ</span>
+                            <input type="checkbox" name="sabor_pollo" id="tamarindoP">
+                            <span>Tamarindo</span>
+                            <input type="checkbox" name="sabor_pollo" id="chipotleP">
+                            <span>Chipotle</span>
+                        </div>
+                    </label>
+                </div>
+
+                <div class="comida__seccion">
+                    <label for="costilla">
+                        <span>Costilla</span>
+                        <div class="cantidad">
+                            <input type="number" name="costilla" id="costilla" step="0.5" min="0">
+                        </div>
+                        <div class="sabor">
+                            <input type="checkbox" name="sabor_pollo" id="naturalC">
+                            <span>Natural</span>
+                            <input type="checkbox" name="sabor_pollo" id="bbqC">
+                            <span>BBQ</span>
+                            <input type="checkbox" name="sabor_pollo" id="tamarindoC">
+                            <span>Tamarindo</span>
+                            <input type="checkbox" name="sabor_pollo" id="chipotleC">
+                            <span>Chipotle</span>
+                        </div>
+                    </label>
+                </div>
+
+            </section>
+
+            <section class="complementos">
+                <h2>Complementos</h2>
+                
+                <div class="complementos__seccion">
+                    <label for="sopa">
+                        <span>Sopa</span>
+                        <div class="cantidad">
+                            <input type="number" name="sopa" id="sopa" min="0">
+                        </div>
+                    </label>
+                </div>
+                <div class="complementos__seccion">
+                    <label for="rusa">
+                        <span>Rusa</span>
+                        <div class="cantidad">
+                            <input type="number" name="rusa" id="rusa" min="0">
+                        </div>
+                    </label>
+                </div>
+                <div class="complementos__seccion">
+                    <label for="arroz">
+                        <span>Arroz</span>
+                        <div class="cantidad">
+                            <input type="number" name="arroz" id="arroz" min="0">
+                        </div>
+                    </label>
+                </div>
+                <div class="complementos__seccion">
+                    <label for="verde">
+                        <span>Verde</span>
+                        <div class="cantidad">
+                            <input type="number" name="verde" id="verde" min="0">
+                        </div>
+                    </label>
+                </div>
+                <div class="complementos__seccion">
+                    <label for="pure">
+                        <span>Pure</span>
+                        <div class="cantidad">
+                            <input type="number" name="pure" id="pure" min="0">
+                        </div>
+                    </label>
+                </div>
+                <div class="complementos__seccion">
+                    <label for="francesa">
+                        <span>Francesa</span>
+                        <div class="cantidad">
+                            <input type="number" name="francesa" id="francesa" min="0">
+                        </div>
+                    </label>
+                </div>
+                <div class="complementos__seccion">
+                    <label for="reja">
+                        <span>Reja</span>
+                        <div class="cantidad">
+                            <input type="number" name="reja" id="reja" min="0">
+                        </div>
+                    </label>
+                </div>
+                <div class="complementos__seccion">
+                    <label for="papasbolsa">
+                        <span>Papas de bolsa</span>
+                        <div class="cantidad">
+                            <input type="number" name="papasBolsa" id="papasbolsa" min="0">
+                        </div>
+                    </label>
+                </div>
+                <div class="complementos__seccion">
+                    <label for="espagueti">
+                        <span>Espagueti</span>
+                        <div class="cantidad">
+                            <input type="number" name="espagueti" id="espagueti" min="0">
+                        </div>
+                    </label>
+                </div>
+                <div class="complementos__seccion">
+                    <label for="frijoles">
+                        <span>Frijoles</span>
+                        <div class="cantidad">
+                            <input type="number" name="frijoles" id="frijoles" min="0">
+                        </div>
+                    </label>
+                </div>
+                
+            </section>
+
+            <section class="postres">
+                <h2>Postres</h2>
+                
+                <div class="postres__seccion">
+                    <label for="fresas">
+                        <span>Fresas</span>
+                        <div class="cantidad">
+                            <input type="number" name="fresas" id="fresas" min="0">
+                        </div>
+                    </label>
+                </div>
+                <div class="postres__seccion">
+                    <label for="manzanas">
+                        <span>Manzanas</span>
+                        <div class="cantidad">
+                            <input type="number" name="manzanas" id="manzanas" min="0">
+                        </div>
+                    </label>
+                </div>
+                <div class="postres__seccion">
+                    <label for="arrozleche">
+                        <span>Arroz con leche</span>
+                        <div class="cantidad">
+                            <input type="number" name="arrozLeche" id="arrozleche" min="0">
+                        </div>
+                    </label>
+                </div>
+                <div class="postres__seccion">
+                    <label for="zarzamoras">
+                        <span>Zarzamoras</span>
+                        <div class="cantidad">
+                            <input type="number" name="zarzamoras" id="zarzamoras" min="0">
+                        </div>
+                    </label>
+                </div>
+                
+            </section>
+
+            <section class="cliente">
+                <h2>Datos del cliente</h2>
+                <div class="nombre">
+                    <label for="nombre">
+                        <span>Nombre</span>
+                        <input type="text" name="nombre" id="nombre" autocomplete="off">
+                    </label>
+                </div>
+                <div class="hora">
+                    <label for="hora">
+                        <span>Hora</span>
+                        <input type="time" name="hora" id="hora">
+                    </label>
+                </div>
+            </section>
+            
+            <input type="submit" value="Añadir pedido" class="boton_add">
+            
+        </form>
+    </main>
+    <script src="./js/nuevo.js"></script>
+</body>
+</html>
