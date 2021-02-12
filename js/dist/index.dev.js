@@ -16,21 +16,26 @@ function filtrar() {
   // console.log(buscar.value);
   var pedidosAux = [];
   var texto = buscar.value.toLowerCase();
-  pedidos.forEach(function (pedido) {
-    var nombre = pedido.nombre.toLowerCase();
 
-    if (nombre.indexOf(texto) !== -1) {
-      pedidosAux.push(pedido);
-    }
-  });
-  cargarHTML(pedidosAux, 1);
+  if (pedidos !== null) {
+    pedidos.forEach(function (pedido) {
+      var nombre = pedido.nombre.toLowerCase();
+
+      if (nombre.indexOf(texto) !== -1) {
+        pedidosAux.push(pedido);
+      }
+    });
+    cargarHTML(pedidosAux, 1);
+  } else {
+    cargarHTML(null, 1);
+  }
 } // opc 1 indica que el arreglo de pedidos viene desde buscar
 
 
 function cargarHTML(pedidos, opc) {
   limpiarHTML();
 
-  if (pedidos.length > 0) {
+  if (pedidos !== null && pedidos.length > 0) {
     pedidos.forEach(function (pedido) {
       var pollo = pedido.pollo,
           saborPollo = pedido.saborPollo,

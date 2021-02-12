@@ -17,18 +17,22 @@ function filtrar() {
     // console.log(buscar.value);
     let pedidosAux = [];
     const texto = buscar.value.toLowerCase();
-    pedidos.forEach(pedido=>{
-        let nombre = pedido.nombre.toLowerCase();
-        if(nombre.indexOf(texto) !== -1){
-            pedidosAux.push(pedido);
-        }
-    });
-    cargarHTML(pedidosAux,1)
+    if(pedidos!==null){
+        pedidos.forEach(pedido=>{
+            let nombre = pedido.nombre.toLowerCase();
+            if(nombre.indexOf(texto) !== -1){
+                pedidosAux.push(pedido);
+            }
+        });
+        cargarHTML(pedidosAux,1)
+    }else {
+        cargarHTML(null,1)
+    }
 }
 // opc 1 indica que el arreglo de pedidos viene desde buscar
 function cargarHTML(pedidos,opc) {
     limpiarHTML();
-    if(pedidos.length>0){
+    if(pedidos!==null && pedidos.length>0){
         pedidos.forEach(pedido => {
 
             const {pollo,saborPollo,costilla,saborCostilla,sopa,rusa,arroz,verde,pure,francesa,reja,papasBolsa,espagueti,
