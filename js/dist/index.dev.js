@@ -1,18 +1,36 @@
 "use strict";
 
 var listaPedidos = document.querySelector("#contenedor_pedidos");
+var buscar = document.querySelector("#buscar");
+var boton = document.querySelector("#boton");
 var pedidos = JSON.parse(localStorage.getItem("pedidos")) || null;
 eventListeners();
 
 function eventListeners() {
-  document.addEventListener('DOMContentLoaded', cargarHTML);
+  document.addEventListener('DOMContentLoaded', cargarHTML(pedidos, 0));
   listaPedidos.addEventListener('click', borrarPedido);
+  buscar.addEventListener('keyup', filtrar);
 }
 
-function cargarHTML() {
+function filtrar() {
+  // console.log(buscar.value);
+  var pedidosAux = [];
+  var texto = buscar.value.toLowerCase();
+  pedidos.forEach(function (pedido) {
+    var nombre = pedido.nombre.toLowerCase();
+
+    if (nombre.indexOf(texto) !== -1) {
+      pedidosAux.push(pedido);
+    }
+  });
+  cargarHTML(pedidosAux, 1);
+} // opc 1 indica que el arreglo de pedidos viene desde buscar
+
+
+function cargarHTML(pedidos, opc) {
   limpiarHTML();
 
-  if (pedidos !== null) {
+  if (pedidos.length > 0) {
     pedidos.forEach(function (pedido) {
       var pollo = pedido.pollo,
           saborPollo = pedido.saborPollo,
@@ -127,6 +145,8 @@ function cargarHTML() {
       divPedido.appendChild(ulPedido);
       listaPedidos.appendChild(divPedido);
     });
+  } else if (opc === 1) {
+    listaPedidos.innerHTML = "<p> Pedido no encontrado <p>";
   }
 
   sinconizarStorage();
@@ -138,7 +158,7 @@ function borrarPedido(e) {
   pedidos = pedidos.filter(function (pedido) {
     return pedido.id != id;
   });
-  cargarHTML();
+  cargarHTML(pedidos);
 }
 
 function limpiarHTML() {

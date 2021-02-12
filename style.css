@@ -21,8 +21,11 @@ li {
     font-weight: normal;
     font-size: 1.2rem;
 }
-#divisor {
+body > #divisor {
     margin: 10px 20px;
+}
+#divisor {
+    margin: 10px 0px;
     height: 2px;
     background-color: black;
     border: none;
@@ -78,7 +81,6 @@ header {
 /* index titulo */
 .titulo ul {
     display: grid;
-    margin: 0 20px;
     grid-template-columns: 1fr 2fr 7fr;
 }
 .titulo ul li {
@@ -87,12 +89,38 @@ header {
 .titulo ul li:last-child {
     margin-right: 0;
 }
+/* index buscar */
+.contenedor_buscar {
+    display: flex;
+    margin-bottom: 10px;
+}
+.contenedor_buscar input {
+    width: 90%;
+    border: none;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    padding-left: 5px;
 
+}
+.contenedor_buscar input:focus{
+    outline: none;
+}
+.contenedor_buscar img {
+    padding: 5px 5px 5px 0;
+    padding-right: 5px;
+    width: 10%;
+    background-color: white;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.contenedor_buscar img:hover{
+    cursor: pointer;
+}
 /* index pedidos */
 #contenedor_pedidos {
     display: flex;
     flex-direction: column;
-    margin: 10px 20px
+    margin: 10px 0px;
 }
 .pedido ul {
     display: grid;

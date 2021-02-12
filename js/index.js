@@ -1,19 +1,34 @@
 const listaPedidos = document.querySelector("#contenedor_pedidos");
+const buscar = document.querySelector("#buscar");
+const boton = document.querySelector("#boton");
 
 let pedidos = JSON.parse(localStorage.getItem("pedidos")) || null;
 
 
-
 eventListeners();
 function eventListeners() {
-    document.addEventListener('DOMContentLoaded',cargarHTML);
+    document.addEventListener('DOMContentLoaded',cargarHTML(pedidos,0));
     listaPedidos.addEventListener('click',borrarPedido);
+    buscar.addEventListener('keyup',filtrar);
 
 }
 
-function cargarHTML() {
+function filtrar() {
+    // console.log(buscar.value);
+    let pedidosAux = [];
+    const texto = buscar.value.toLowerCase();
+    pedidos.forEach(pedido=>{
+        let nombre = pedido.nombre.toLowerCase();
+        if(nombre.indexOf(texto) !== -1){
+            pedidosAux.push(pedido);
+        }
+    });
+    cargarHTML(pedidosAux,1)
+}
+// opc 1 indica que el arreglo de pedidos viene desde buscar
+function cargarHTML(pedidos,opc) {
     limpiarHTML();
-    if(pedidos !== null){
+    if(pedidos.length>0){
         pedidos.forEach(pedido => {
 
             const {pollo,saborPollo,costilla,saborCostilla,sopa,rusa,arroz,verde,pure,francesa,reja,papasBolsa,espagueti,
@@ -104,6 +119,8 @@ function cargarHTML() {
             listaPedidos.appendChild(divPedido);
 
         });
+    }else if(opc===1) {
+        listaPedidos.innerHTML = `<p> Pedido no encontrado <p>`;
     }
     sinconizarStorage();
 }
@@ -112,7 +129,7 @@ function borrarPedido(e){
 
     const id = e.target.parentElement.dataset.pedidoId;
     pedidos = pedidos.filter(pedido => pedido.id != id);
-    cargarHTML();
+    cargarHTML(pedidos);
 }
 function limpiarHTML() {
     while(listaPedidos.firstChild){
