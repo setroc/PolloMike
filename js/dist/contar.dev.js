@@ -41,46 +41,50 @@ function cargarHTML() {
       totalManzanas = 0,
       totalArrozLeche = 0,
       totalZarzamoras = 0;
-  pedidos.forEach(function (pedido) {
-    var pollo = pedido.pollo,
-        saborPollo = pedido.saborPollo,
-        costilla = pedido.costilla,
-        saborCostilla = pedido.saborCostilla,
-        sopa = pedido.sopa,
-        rusa = pedido.rusa,
-        arroz = pedido.arroz,
-        verde = pedido.verde,
-        pure = pedido.pure,
-        francesa = pedido.francesa,
-        reja = pedido.reja,
-        papasBolsa = pedido.papasBolsa,
-        espagueti = pedido.espagueti,
-        frijoles = pedido.frijoles,
-        nuggets = pedido.nuggets,
-        fresas = pedido.fresas,
-        manzanas = pedido.manzanas,
-        arrozLeche = pedido.arrozLeche,
-        zarzamoras = pedido.zarzamoras,
-        nombre = pedido.nombre,
-        hora = pedido.hora;
-    if (parseInt(pollo, 10) >= 0) totalPollo += parseInt(pollo, 10);
-    if (parseInt(costilla, 10) >= 0) totalCostilla += parseInt(costilla, 10);
-    if (parseInt(sopa, 10) >= 0) totalSopa += parseInt(sopa, 10);
-    if (parseInt(rusa, 10) >= 0) totalRusa += parseInt(rusa, 10);
-    if (parseInt(arroz, 10) >= 0) totalArroz += parseInt(arroz, 10);
-    if (parseInt(verde, 10) >= 0) totalVerde += parseInt(verde, 10);
-    if (parseInt(pure, 10) >= 0) totalPure += parseInt(pure, 10);
-    if (parseInt(francesa, 10) >= 0) totalFrancesa += parseInt(francesa, 10);
-    if (parseInt(reja, 10) >= 0) totalReja += parseInt(reja, 10);
-    if (parseInt(papasBolsa, 10) >= 0) totalPapasBolsa += parseInt(papasBolsa, 10);
-    if (parseInt(espagueti, 10) >= 0) totalEspagueti += parseInt(espagueti, 10);
-    if (parseInt(frijoles, 10) >= 0) totalFrijoles += parseInt(frijoles, 10);
-    if (parseInt(nuggets, 10) >= 0) totalNuggets += parseInt(nuggets, 10);
-    if (parseInt(fresas, 10) >= 0) totalFresas += parseInt(fresas, 10);
-    if (parseInt(manzanas, 10) >= 0) totalManzanas += parseInt(manzanas, 10);
-    if (parseInt(arrozLeche, 10) >= 0) totalArrozLeche += parseInt(arrozLeche, 10);
-    if (parseInt(zarzamoras, 10) >= 0) totalZarzamoras += parseInt(zarzamoras, 10);
-  });
+
+  if (pedidos !== null && pedidos.length > 0) {
+    pedidos.forEach(function (pedido) {
+      var pollo = pedido.pollo,
+          saborPollo = pedido.saborPollo,
+          costilla = pedido.costilla,
+          saborCostilla = pedido.saborCostilla,
+          sopa = pedido.sopa,
+          rusa = pedido.rusa,
+          arroz = pedido.arroz,
+          verde = pedido.verde,
+          pure = pedido.pure,
+          francesa = pedido.francesa,
+          reja = pedido.reja,
+          papasBolsa = pedido.papasBolsa,
+          espagueti = pedido.espagueti,
+          frijoles = pedido.frijoles,
+          nuggets = pedido.nuggets,
+          fresas = pedido.fresas,
+          manzanas = pedido.manzanas,
+          arrozLeche = pedido.arrozLeche,
+          zarzamoras = pedido.zarzamoras,
+          nombre = pedido.nombre,
+          hora = pedido.hora;
+      if (parseInt(pollo, 10) >= 0) totalPollo += parseInt(pollo, 10);
+      if (parseInt(costilla, 10) >= 0) totalCostilla += parseInt(costilla, 10);
+      if (parseInt(sopa, 10) >= 0) totalSopa += parseInt(sopa, 10);
+      if (parseInt(rusa, 10) >= 0) totalRusa += parseInt(rusa, 10);
+      if (parseInt(arroz, 10) >= 0) totalArroz += parseInt(arroz, 10);
+      if (parseInt(verde, 10) >= 0) totalVerde += parseInt(verde, 10);
+      if (parseInt(pure, 10) >= 0) totalPure += parseInt(pure, 10);
+      if (parseInt(francesa, 10) >= 0) totalFrancesa += parseInt(francesa, 10);
+      if (parseInt(reja, 10) >= 0) totalReja += parseInt(reja, 10);
+      if (parseInt(papasBolsa, 10) >= 0) totalPapasBolsa += parseInt(papasBolsa, 10);
+      if (parseInt(espagueti, 10) >= 0) totalEspagueti += parseInt(espagueti, 10);
+      if (parseInt(frijoles, 10) >= 0) totalFrijoles += parseInt(frijoles, 10);
+      if (parseInt(nuggets, 10) >= 0) totalNuggets += parseInt(nuggets, 10);
+      if (parseInt(fresas, 10) >= 0) totalFresas += parseInt(fresas, 10);
+      if (parseInt(manzanas, 10) >= 0) totalManzanas += parseInt(manzanas, 10);
+      if (parseInt(arrozLeche, 10) >= 0) totalArrozLeche += parseInt(arrozLeche, 10);
+      if (parseInt(zarzamoras, 10) >= 0) totalZarzamoras += parseInt(zarzamoras, 10);
+    });
+  }
+
   polloInput.value = totalPollo;
   costillaInput.value = totalCostilla;
   sopaInput.value = totalSopa;
