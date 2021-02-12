@@ -139,6 +139,9 @@ function agregarPedido(e){
     if(document.querySelector("#tamarindoP").checked){
         saborP += "tamarindo ";
     }
+    if(document.querySelector("#adoboP").checked){
+        saborP += "adobo ";
+    }
     if(document.querySelector("#chipotleP").checked){
         saborP += "chipotle ";
     }
@@ -152,6 +155,9 @@ function agregarPedido(e){
     }
     if(document.querySelector("#tamarindoC").checked){
         saborC += "tamarindo ";
+    }
+    if(document.querySelector("#adoboC").checked){
+        saborC += "adobo ";
     }
     if(document.querySelector("#chipotleC").checked){
         saborC += "chipotle ";
