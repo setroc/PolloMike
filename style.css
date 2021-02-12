@@ -4,10 +4,281 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+/* Generales */
 html {
     font-size: 62.5%;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Prompt', sans-serif;
 }
+body{
+    background: linear-gradient(180deg, #FD8000 0%, #FECD00 100%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+}
+li {
+    list-style: none;
+    font-weight: normal;
+    font-size: 1.2rem;
+}
+#divisor {
+    margin: 10px 20px;
+    height: 2px;
+    background-color: black;
+    border: none;
+
+}
+main {
+    width: auto;
+    height: auto;
+}
+.titulo {
+    font-size: 1.8rem;
+}
+h2 {
+    font-weight: normal;
+    font-size: 1.4rem;
+    text-align: center;
+}
+.cantidad{
+    width: 100%;
+}
+.cantidad input {
+    border: none;
+    height: 20px;
+    width: 100%;
+}
+span {
+    text-transform: capitalize;
+}
+/* header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+}
+#logo {
+    width: 30%;
+    margin-left: 20px;
+}
+#nav {
+    min-width: 100px;
+    width: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 20px;
+}
+#nav img {
+    min-width: 24px;
+    width: auto;
+}
+
+/* index titulo */
+.titulo ul {
+    display: grid;
+    margin: 0 20px;
+    grid-template-columns: 1fr 2fr 7fr;
+}
+.titulo ul li {
+    margin-right: 10px;
+}
+.titulo ul li:last-child {
+    margin-right: 0;
+}
+
+/* index pedidos */
+#contenedor_pedidos {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 20px
+}
+.pedido ul {
+    display: grid;
+    grid-template-columns: 1fr 2fr 6fr 1fr;
+}
+.pedido ul li {
+    font-size: 0.9rem;
+    font-weight: 300;
+    margin-right: 10px;
+    list-style: none;
+}
+.pedido ul .borrar-pedido{
+    margin-right: 0px;
+    align-self: center;
+    cursor: pointer;
+    color: red;
+    font-size: 1.8rem;
+    font-weight: bold;
+    justify-self: center;
+}
+
+/* Nuevo apartado */
+.header_secundario {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0 10px 0;
+}
+.header_secundario #logo {
+    width: 20%;
+}
+.header_secundario .titulo {
+    width: 200px;
+}
+main {
+    width: auto;
+    height: auto;
+    margin: 0 20px;
+}
+#nuevoPedido,
+.comida,
+.comida__seccion {
+    width: 100%;
+    height: 100%;
+}
+.comida__seccion label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px 0; 
+}
+.comida__seccion label span {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+.comida__seccion .cantidad,
+.comida__seccion .cantidad input {
+    width: 100%;
+}
+.comida__seccion .sabor {
+    width: 100%;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+.comida__seccion .sabor span {
+    font-size: 1rem;
+    font-weight: 200;
+}
+/* Complementos y postres */
+.complementos,
+.postres,
+.cliente {
+    display: flex;
+    flex-direction: column;
+}
+.complementos h2,
+.postres h2,
+.cliente h2{
+    margin-bottom: 10px;
+}
+
+.complementos__seccion label,
+.postres__seccion label{
+    display: flex;
+    align-items: center;
+}
+.complementos__seccion label span,
+.postres__seccion label span {
+    min-width: 100px;
+    width: auto;
+}
+.complementos__seccion label .cantidad,
+.postres__seccion label .cantidad {
+    margin-bottom: 10px;
+}
+
+.cliente div {
+    margin-bottom: 10px;
+}
+.cliente .nombre label,
+.cliente .hora label {
+    display: flex;
+    align-items: center;
+}
+.cliente .nombre label span,
+.cliente .hora label span {
+    min-width: 100px;
+    width: auto;
+}
+.cliente .nombre label input,
+.cliente .hora label input {
+    width: 100%;
+    height: 20px;
+    border: none;
+}
+.boton_add {
+    background-color: white;
+    border: none;
+    align-self: center;
+    width: 100%;
+    padding: 7px 0;
+    border-radius: 100px;
+    margin-bottom: 10px;
+    font-weight: 400;
+    font-size: 1.2rem;
+}
+
+/* contar */
+.seccion {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.seccion input {
+    width: 80%;
+    height: 20px;
+    border: none;
+    text-align: center;
+}
+.seccion span {
+    font-weight: 300;
+    font-size: 1.2rem;
+}
+
+.contar {
+    display: flex;
+    flex-direction: column;
+}
+.contar .comida {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+main > .complementos {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(4,1fr);
+    margin-top: 10px;
+}
+main > .postres {
+    display: grid;
+    grid-template-rows: repeat(2,1fr);
+    grid-template-columns: repeat(2,1fr);
+    margin: 10px 0;
+}
+.regresar {
+    width: 100%;
+    text-align: center;
+    background-color: white;
+    padding: 7px 0;
+    border-radius: 100px;
+    text-decoration: none;
+    color: black;
+    font-weight: 400;
+    font-size: 1.2rem;
+}
+
+
+
+/* background: linear-gradient(180deg, #FD8000 0%, #FECD00 100%), #FFFFFF;
+
 a {
     text-decoration: none;
     color: black;
@@ -91,6 +362,9 @@ hr {
 
 
 /* nuevo.html */
+
+/* 
+
 
 form {
     width: 100%;
@@ -241,6 +515,9 @@ form {
     cursor: pointer;
 }
 /* Contar */
+
+/* 
+
 .contar {
     display: flex;
     flex-direction: column;
@@ -268,4 +545,4 @@ form {
     border-radius: 100px;
     font-size: 1.4rem;
     font-weight: normal;
-}
+} */

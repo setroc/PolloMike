@@ -12,7 +12,7 @@ function eventListeners() {
 function cargarHTML() {
   limpiarHTML();
 
-  if (pedidos.length > 0) {
+  if (pedidos !== null) {
     pedidos.forEach(function (pedido) {
       var pollo = pedido.pollo,
           saborPollo = pedido.saborPollo,
@@ -28,6 +28,7 @@ function cargarHTML() {
           papasBolsa = pedido.papasBolsa,
           espagueti = pedido.espagueti,
           frijoles = pedido.frijoles,
+          nuggets = pedido.nuggets,
           fresas = pedido.fresas,
           manzanas = pedido.manzanas,
           arrozLeche = pedido.arrozLeche,
@@ -82,6 +83,10 @@ function cargarHTML() {
 
       if (frijoles.length > 0) {
         textoPedido += "".concat(frijoles, " Frijoles, ");
+      }
+
+      if (nuggets.length > 0) {
+        textoPedido += "".concat(frijoles, " Nuggets, ");
       }
 
       if (fresas.length > 0) {

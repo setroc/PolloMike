@@ -12,6 +12,7 @@ const rejaInput = document.querySelector("#reja");
 const papasBolsaInput = document.querySelector("#papasbolsa");
 const espaguetiInput = document.querySelector("#espagueti");
 const frijolesInput = document.querySelector("#frijoles");
+const nuggetsInput = document.querySelector("#nuggets");
 //postres
 const fresasInput = document.querySelector("#fresas");
 const manzanasInput = document.querySelector("#manzanas");
@@ -65,6 +66,7 @@ function agregarPedido(e){
         papasBolsa: '',
         espagueti: '',
         frijoles: '',
+        nuggets: '',
         fresas: '',
         manzanas: '',
         arrozLeche: '',
@@ -107,6 +109,9 @@ function agregarPedido(e){
     }
     if(frijolesInput.value){
         pedidoObj.frijoles = frijolesInput.value;
+    }
+    if(nuggetsInput.value){
+        pedidoObj.nuggets = nuggetsInput.value;
     }
     if(fresasInput.value){
         pedidoObj.fresas = fresasInput.value;

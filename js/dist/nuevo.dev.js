@@ -21,7 +21,8 @@ var francesaInput = document.querySelector("#francesa");
 var rejaInput = document.querySelector("#reja");
 var papasBolsaInput = document.querySelector("#papasbolsa");
 var espaguetiInput = document.querySelector("#espagueti");
-var frijolesInput = document.querySelector("#frijoles"); //postres
+var frijolesInput = document.querySelector("#frijoles");
+var nuggetsInput = document.querySelector("#nuggets"); //postres
 
 var fresasInput = document.querySelector("#fresas");
 var manzanasInput = document.querySelector("#manzanas");
@@ -65,6 +66,7 @@ function agregarPedido(e) {
     papasBolsa: '',
     espagueti: '',
     frijoles: '',
+    nuggets: '',
     fresas: '',
     manzanas: '',
     arrozLeche: '',
@@ -119,6 +121,10 @@ function agregarPedido(e) {
 
   if (frijolesInput.value) {
     pedidoObj.frijoles = frijolesInput.value;
+  }
+
+  if (nuggetsInput.value) {
+    pedidoObj.nuggets = nuggetsInput.value;
   }
 
   if (fresasInput.value) {

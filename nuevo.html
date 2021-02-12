@@ -6,26 +6,18 @@
     <title>Pollo Mike</title>
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@200;300;400&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
+    <header class="header_secundario">
+        <img id="logo" src="./img/logo.png" alt="Pollo Mike">
         <div>
-            <h1 class="apartados">Nuevo apartado</h1>
-
+            <h1 class="titulo">Nuevo apartado</h1>
         </div>
-        <!-- <div>
-            <ul>
-                <ul>
-                    <li><a class="contar" href="./index.html">Inicio</a></li>
-                    <li><a class="contar" href="./contar.html">Contar</a></li>
-                </ul>
-            </ul>
-            
-        </div> -->
     </header>
-    <hr>
+    <hr id="divisor">
     <main>
         <form id="nuevoPedido">
 
@@ -151,6 +143,14 @@
                         <span>Frijoles</span>
                         <div class="cantidad">
                             <input type="number" name="frijoles" id="frijoles" min="0">
+                        </div>
+                    </label>
+                </div>
+                <div class="complementos__seccion">
+                    <label for="nuggets">
+                        <span>Nuggets</span>
+                        <div class="cantidad">
+                            <input type="number" name="nuggets" id="nuggets" min="0">
                         </div>
                     </label>
                 </div>

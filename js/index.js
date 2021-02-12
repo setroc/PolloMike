@@ -13,11 +13,11 @@ function eventListeners() {
 
 function cargarHTML() {
     limpiarHTML();
-    if(pedidos.length > 0){
+    if(pedidos !== null){
         pedidos.forEach(pedido => {
 
             const {pollo,saborPollo,costilla,saborCostilla,sopa,rusa,arroz,verde,pure,francesa,reja,papasBolsa,espagueti,
-                frijoles,fresas,manzanas,arrozLeche,zarzamoras,nombre,hora} = pedido;
+                frijoles,nuggets,fresas,manzanas,arrozLeche,zarzamoras,nombre,hora} = pedido;
             
             let textoPedido = '';
             if(pollo.length>0){
@@ -56,6 +56,9 @@ function cargarHTML() {
             }
             if(frijoles.length>0){
                 textoPedido += `${frijoles} Frijoles, `;
+            }
+            if(nuggets.length>0){
+                textoPedido += `${frijoles} Nuggets, `;
             }
             if(fresas.length>0){
                 textoPedido += `${fresas} Fresas, `;

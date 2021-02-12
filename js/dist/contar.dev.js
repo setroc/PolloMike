@@ -13,7 +13,8 @@ var francesaInput = document.querySelector("#francesa");
 var rejaInput = document.querySelector("#reja");
 var papasBolsaInput = document.querySelector("#papasbolsa");
 var espaguetiInput = document.querySelector("#espagueti");
-var frijolesInput = document.querySelector("#frijoles"); //postres
+var frijolesInput = document.querySelector("#frijoles");
+var nuggetsInput = document.querySelector("#nuggets"); //postres
 
 var fresasInput = document.querySelector("#fresas");
 var manzanasInput = document.querySelector("#manzanas");
@@ -35,6 +36,7 @@ function cargarHTML() {
       totalPapasBolsa = 0,
       totalEspagueti = 0,
       totalFrijoles = 0,
+      totalNuggets = 0,
       totalFresas = 0,
       totalManzanas = 0,
       totalArrozLeche = 0,
@@ -54,6 +56,7 @@ function cargarHTML() {
         papasBolsa = pedido.papasBolsa,
         espagueti = pedido.espagueti,
         frijoles = pedido.frijoles,
+        nuggets = pedido.nuggets,
         fresas = pedido.fresas,
         manzanas = pedido.manzanas,
         arrozLeche = pedido.arrozLeche,
@@ -72,6 +75,7 @@ function cargarHTML() {
     if (parseInt(papasBolsa, 10) >= 0) totalPapasBolsa += parseInt(papasBolsa, 10);
     if (parseInt(espagueti, 10) >= 0) totalEspagueti += parseInt(espagueti, 10);
     if (parseInt(frijoles, 10) >= 0) totalFrijoles += parseInt(frijoles, 10);
+    if (parseInt(nuggets, 10) >= 0) totalNuggets += parseInt(nuggets, 10);
     if (parseInt(fresas, 10) >= 0) totalFresas += parseInt(fresas, 10);
     if (parseInt(manzanas, 10) >= 0) totalManzanas += parseInt(manzanas, 10);
     if (parseInt(arrozLeche, 10) >= 0) totalArrozLeche += parseInt(arrozLeche, 10);
@@ -89,6 +93,7 @@ function cargarHTML() {
   papasBolsaInput.value = totalPapasBolsa;
   espaguetiInput.value = totalEspagueti;
   frijolesInput.value = totalFrijoles;
+  nuggetsInput.value = totalNuggets;
   fresasInput.value = totalFresas;
   manzanasInput.value = totalManzanas;
   arrozLecheInput.value = totalArrozLeche;
