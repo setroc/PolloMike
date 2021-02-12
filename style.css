@@ -269,8 +269,10 @@ main {
 }
 
 .contar {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6,auto);
+
 }
 .contar .comida {
     display: grid;
@@ -306,7 +308,12 @@ main > .postres {
 .regresar:focus {
     outline: none;
 }
-
+.contenedor_boton{
+    grid-column-start: 0;
+    grid-column-end: 0;
+    grid-row-start: 6;
+    grid-row-end: 7;
+}
 
 
 
