@@ -20,6 +20,11 @@ var fresasInput = document.querySelector("#fresas");
 var manzanasInput = document.querySelector("#manzanas");
 var arrozLecheInput = document.querySelector("#arrozleche");
 var zarzamorasInput = document.querySelector("#zarzamoras");
+var boton = document.querySelector(".regresar");
+boton.addEventListener('click', function (e) {
+  e.preventDefault();
+  location.href = "index.html";
+});
 var pedidos = JSON.parse(localStorage.getItem("pedidos")) || null;
 document.addEventListener('DOMContentLoaded', cargarHTML());
 

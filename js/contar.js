@@ -20,6 +20,11 @@ const manzanasInput = document.querySelector("#manzanas");
 const arrozLecheInput = document.querySelector("#arrozleche");
 const zarzamorasInput = document.querySelector("#zarzamoras");
 
+const boton = document.querySelector(".regresar");
+boton.addEventListener('click',(e)=>{
+    e.preventDefault();
+    location.href = "index.html";
+})
 
 let pedidos = JSON.parse(localStorage.getItem("pedidos")) || null;
 document.addEventListener('DOMContentLoaded',cargarHTML());
@@ -28,7 +33,7 @@ function cargarHTML() {
     let totalPollo=0,totalCostilla=0,totalSopa=0,totalRusa=0,totalArroz=0,totalVerde=0,totalPure=0,
         totalFrancesa=0,totalReja=0,totalPapasBolsa=0,totalEspagueti=0,totalFrijoles=0,totalNuggets=0,
         totalFresas=0,totalManzanas=0,totalArrozLeche=0,totalZarzamoras=0;
-        
+
     if(pedidos!== null && pedidos.length>0){
             
         pedidos.forEach(pedido => {
