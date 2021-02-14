@@ -70,23 +70,23 @@ function cargarHTML() {
           zarzamoras = pedido.zarzamoras,
           nombre = pedido.nombre,
           hora = pedido.hora;
-      if (parseInt(pollo, 10) >= 0) totalPollo += parseInt(pollo, 10);
-      if (parseInt(costilla, 10) >= 0) totalCostilla += parseInt(costilla, 10);
-      if (parseInt(sopa, 10) >= 0) totalSopa += parseInt(sopa, 10);
-      if (parseInt(rusa, 10) >= 0) totalRusa += parseInt(rusa, 10);
-      if (parseInt(arroz, 10) >= 0) totalArroz += parseInt(arroz, 10);
-      if (parseInt(verde, 10) >= 0) totalVerde += parseInt(verde, 10);
-      if (parseInt(pure, 10) >= 0) totalPure += parseInt(pure, 10);
-      if (parseInt(francesa, 10) >= 0) totalFrancesa += parseInt(francesa, 10);
-      if (parseInt(reja, 10) >= 0) totalReja += parseInt(reja, 10);
-      if (parseInt(papasBolsa, 10) >= 0) totalPapasBolsa += parseInt(papasBolsa, 10);
-      if (parseInt(espagueti, 10) >= 0) totalEspagueti += parseInt(espagueti, 10);
-      if (parseInt(frijoles, 10) >= 0) totalFrijoles += parseInt(frijoles, 10);
-      if (parseInt(nuggets, 10) >= 0) totalNuggets += parseInt(nuggets, 10);
-      if (parseInt(fresas, 10) >= 0) totalFresas += parseInt(fresas, 10);
-      if (parseInt(manzanas, 10) >= 0) totalManzanas += parseInt(manzanas, 10);
-      if (parseInt(arrozLeche, 10) >= 0) totalArrozLeche += parseInt(arrozLeche, 10);
-      if (parseInt(zarzamoras, 10) >= 0) totalZarzamoras += parseInt(zarzamoras, 10);
+      if (parseFloat(pollo, 10) >= 0) totalPollo += parseFloat(pollo, 10);
+      if (parseFloat(costilla, 10) >= 0) totalCostilla += parseFloat(costilla, 10);
+      if (parseFloat(sopa, 10) >= 0) totalSopa += parseFloat(sopa, 10);
+      if (parseFloat(rusa, 10) >= 0) totalRusa += parseFloat(rusa, 10);
+      if (parseFloat(arroz, 10) >= 0) totalArroz += parseFloat(arroz, 10);
+      if (parseFloat(verde, 10) >= 0) totalVerde += parseFloat(verde, 10);
+      if (parseFloat(pure, 10) >= 0) totalPure += parseFloat(pure, 10);
+      if (parseFloat(francesa, 10) >= 0) totalFrancesa += parseFloat(francesa, 10);
+      if (parseFloat(reja, 10) >= 0) totalReja += parseFloat(reja, 10);
+      if (parseFloat(papasBolsa, 10) >= 0) totalPapasBolsa += parseFloat(papasBolsa, 10);
+      if (parseFloat(espagueti, 10) >= 0) totalEspagueti += parseFloat(espagueti, 10);
+      if (parseFloat(frijoles, 10) >= 0) totalFrijoles += parseFloat(frijoles, 10);
+      if (parseFloat(nuggets, 10) >= 0) totalNuggets += parseFloat(nuggets, 10);
+      if (parseFloat(fresas, 10) >= 0) totalFresas += parseFloat(fresas, 10);
+      if (parseFloat(manzanas, 10) >= 0) totalManzanas += parseFloat(manzanas, 10);
+      if (parseFloat(arrozLeche, 10) >= 0) totalArrozLeche += parseFloat(arrozLeche, 10);
+      if (parseFloat(zarzamoras, 10) >= 0) totalZarzamoras += parseFloat(zarzamoras, 10);
     });
   }
 

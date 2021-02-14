@@ -1,17 +1,19 @@
+// const borrados = document.querySelector("#borrados");
 const listaPedidos = document.querySelector("#contenedor_pedidos");
+const listaPedidosBorrados = document.querySelector("#contenedor_pedidos_borrados");
 const buscar = document.querySelector("#buscar");
 const boton = document.querySelector("#boton");
 
 let pedidos = JSON.parse(localStorage.getItem("pedidos")) || null;
-
+let pedidosBorrados = JSON.parse(localStorage.getItem("pedidosBorrados")) || [];
 
 eventListeners();
 function eventListeners() {
-    document.addEventListener('DOMContentLoaded',cargarHTML(pedidos,0));
+    document.addEventListener('DOMContentLoaded',cargarHTML);
     listaPedidos.addEventListener('click',borrarPedido);
     buscar.addEventListener('keyup',filtrar);
-
 }
+
 
 function filtrar() {
     // console.log(buscar.value);
@@ -24,14 +26,20 @@ function filtrar() {
                 pedidosAux.push(pedido);
             }
         });
-        cargarHTML(pedidosAux,1)
+        cargarHTMLPedidos(pedidosAux,1)
     }else {
-        cargarHTML(null,1)
+        cargarHTMLPedidos(null,1)
     }
 }
+
+function cargarHTML() {
+    cargarHTMLPedidos(pedidos,0);
+    mostrarBorrados();
+}
+
 // opc 1 indica que el arreglo de pedidos viene desde buscar
-function cargarHTML(pedidos,opc) {
-    limpiarHTML();
+function cargarHTMLPedidos(pedidos,opc) {
+    limpiarHTMLPedidos();
     if(pedidos!==null && pedidos.length>0){
         pedidos.forEach(pedido => {
 
@@ -128,18 +136,121 @@ function cargarHTML(pedidos,opc) {
     }
     sinconizarStorage();
 }
+function cargarHTMLPedidosBorrados(pedidosBorrados) {
+    limpiarHTMLPedidosBorrados();
+    if(pedidosBorrados!==null && pedidosBorrados.length>0){
+        pedidosBorrados.forEach(pedidoBorrado => {
+            const {pollo,saborPollo,costilla,saborCostilla,sopa,rusa,arroz,verde,pure,francesa,reja,papasBolsa,espagueti,
+                frijoles,nuggets,fresas,manzanas,arrozLeche,zarzamoras,nombre,hora} = pedidoBorrado;
+            
+            let textoPedido = '';
+            if(pollo.length>0){
+                textoPedido += `${pollo} Pollo ${saborPollo}, `;
+            }
+            if(costilla.length>0){
+                textoPedido += `${costilla} Costilla ${saborCostilla}, `;
+            }
+            if(sopa.length>0){
+                textoPedido += `${sopa} Sopa, `;
+
+            }
+            if(rusa.length>0){
+                textoPedido += `${rusa} Rusa, `;
+            }
+            if(arroz.length>0){
+                textoPedido += `${arroz} Arroz, `;
+            }
+            if(verde.length>0){
+                textoPedido += `${verde} Verde, `;
+            }
+            if(pure.length>0){
+                textoPedido += `${pure} Pure, `;
+            }
+            if(francesa.length>0){
+                textoPedido += `${francesa} Francesa, `;
+            }
+            if(reja.length>0){
+                textoPedido += `${reja} Reja, `;
+            }
+            if(papasBolsa.length>0){
+                textoPedido += `${papasBolsa} Chips, `;
+            }
+            if(espagueti.length>0){
+                textoPedido += `${espagueti} Espaqueti, `;
+            }
+            if(frijoles.length>0){
+                textoPedido += `${frijoles} Frijoles, `;
+            }
+            if(nuggets.length>0){
+                textoPedido += `${frijoles} Nuggets, `;
+            }
+            if(fresas.length>0){
+                textoPedido += `${fresas} Fresas, `;
+            }
+            if(manzanas.length>0){
+                textoPedido += `${manzanas} Manzanas, `;
+            }
+            if(arrozLeche.length>0){
+                textoPedido += `${arrozLeche} Arroz con leche, `;
+            }
+            if(zarzamoras.length>0){
+                textoPedido += `${zarzamoras} Zarzamoras, `;
+            }
+            
+            const campoHora = document.createElement('li');
+            campoHora.innerText = `${hora}`;
+            campoHora.classList = 'tachado';
+
+            const campoNombre = document.createElement('li');
+            campoNombre.innerText = `${nombre}`;
+            campoNombre.classList = 'tachado';
+
+            const campoPedido = document.createElement('li');
+            campoPedido.innerText = textoPedido;
+            campoPedido.classList = 'tachado';
+
+            const ulPedido = document.createElement('ul');
+            ulPedido.appendChild(campoHora);
+            ulPedido.appendChild(campoNombre);
+            ulPedido.appendChild(campoPedido);
+
+            const divPedido = document.createElement('div');
+            divPedido.classList = 'pedido';
+            divPedido.appendChild(ulPedido);
+
+            listaPedidosBorrados.appendChild(divPedido);
+        });
+    }
+    sinconizarStorage();
+}
+function mostrarBorrados() {
+    if(pedidosBorrados.length>0){
+        cargarHTMLPedidosBorrados(pedidosBorrados);
+        borrados.style.display = "block";
+    }
+}
+
 function borrarPedido(e){
     e.preventDefault();
 
     const id = e.target.parentElement.dataset.pedidoId;
+    const pedidoBorrado = pedidos.find(pedido=> pedido.id == id);
     pedidos = pedidos.filter(pedido => pedido.id != id);
-    cargarHTML(pedidos);
+    cargarHTMLPedidos(pedidos);
+    pedidosBorrados.push(pedidoBorrado);
+    mostrarBorrados();
 }
-function limpiarHTML() {
+function limpiarHTMLPedidos() {
     while(listaPedidos.firstChild){
         listaPedidos.removeChild(listaPedidos.firstChild);
     }
 }
+function limpiarHTMLPedidosBorrados() {
+    while(listaPedidosBorrados.firstChild){
+        listaPedidosBorrados.removeChild(listaPedidosBorrados.firstChild);
+    }
+}
 function sinconizarStorage() {
     localStorage.setItem('pedidos', JSON.stringify(pedidos));
+    localStorage.setItem('pedidosBorrados', JSON.stringify(pedidosBorrados));
 }
