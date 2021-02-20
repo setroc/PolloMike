@@ -47,56 +47,56 @@ function cargarHTMLPedidos(pedidos,opc) {
                 frijoles,nuggets,fresas,manzanas,arrozLeche,zarzamoras,nombre,hora} = pedido;
             
             let textoPedido = '';
-            if(pollo.length>0){
+            if(pollo>0){
                 textoPedido += `${pollo} Pollo ${saborPollo}, `;
             }
-            if(costilla.length>0){
+            if(costilla>0){
                 textoPedido += `${costilla} Costilla ${saborCostilla}, `;
             }
-            if(sopa.length>0){
+            if(sopa>0){
                 textoPedido += `${sopa} Sopa, `;
 
             }
-            if(rusa.length>0){
+            if(rusa>0){
                 textoPedido += `${rusa} Rusa, `;
             }
-            if(arroz.length>0){
+            if(arroz>0){
                 textoPedido += `${arroz} Arroz, `;
             }
-            if(verde.length>0){
+            if(verde>0){
                 textoPedido += `${verde} Verde, `;
             }
-            if(pure.length>0){
+            if(pure>0){
                 textoPedido += `${pure} Pure, `;
             }
-            if(francesa.length>0){
+            if(francesa>0){
                 textoPedido += `${francesa} Francesa, `;
             }
-            if(reja.length>0){
+            if(reja>0){
                 textoPedido += `${reja} Reja, `;
             }
-            if(papasBolsa.length>0){
+            if(papasBolsa>0){
                 textoPedido += `${papasBolsa} Chips, `;
             }
-            if(espagueti.length>0){
+            if(espagueti>0){
                 textoPedido += `${espagueti} Espaqueti, `;
             }
-            if(frijoles.length>0){
+            if(frijoles>0){
                 textoPedido += `${frijoles} Frijoles, `;
             }
-            if(nuggets.length>0){
+            if(nuggets>0){
                 textoPedido += `${frijoles} Nuggets, `;
             }
-            if(fresas.length>0){
+            if(fresas>0){
                 textoPedido += `${fresas} Fresas, `;
             }
-            if(manzanas.length>0){
+            if(manzanas>0){
                 textoPedido += `${manzanas} Manzanas, `;
             }
-            if(arrozLeche.length>0){
+            if(arrozLeche>0){
                 textoPedido += `${arrozLeche} Arroz con leche, `;
             }
-            if(zarzamoras.length>0){
+            if(zarzamoras>0){
                 textoPedido += `${zarzamoras} Zarzamoras, `;
             }
             
@@ -144,56 +144,56 @@ function cargarHTMLPedidosBorrados(pedidosBorrados) {
                 frijoles,nuggets,fresas,manzanas,arrozLeche,zarzamoras,nombre,hora} = pedidoBorrado;
             
             let textoPedido = '';
-            if(pollo.length>0){
+            if(pollo>0){
                 textoPedido += `${pollo} Pollo ${saborPollo}, `;
             }
-            if(costilla.length>0){
+            if(costilla>0){
                 textoPedido += `${costilla} Costilla ${saborCostilla}, `;
             }
-            if(sopa.length>0){
+            if(sopa>0){
                 textoPedido += `${sopa} Sopa, `;
 
             }
-            if(rusa.length>0){
+            if(rusa>0){
                 textoPedido += `${rusa} Rusa, `;
             }
-            if(arroz.length>0){
+            if(arroz>0){
                 textoPedido += `${arroz} Arroz, `;
             }
-            if(verde.length>0){
+            if(verde>0){
                 textoPedido += `${verde} Verde, `;
             }
-            if(pure.length>0){
+            if(pure>0){
                 textoPedido += `${pure} Pure, `;
             }
-            if(francesa.length>0){
+            if(francesa>0){
                 textoPedido += `${francesa} Francesa, `;
             }
-            if(reja.length>0){
+            if(reja>0){
                 textoPedido += `${reja} Reja, `;
             }
-            if(papasBolsa.length>0){
+            if(papasBolsa>0){
                 textoPedido += `${papasBolsa} Chips, `;
             }
-            if(espagueti.length>0){
+            if(espagueti>0){
                 textoPedido += `${espagueti} Espaqueti, `;
             }
-            if(frijoles.length>0){
+            if(frijoles>0){
                 textoPedido += `${frijoles} Frijoles, `;
             }
-            if(nuggets.length>0){
+            if(nuggets>0){
                 textoPedido += `${frijoles} Nuggets, `;
             }
-            if(fresas.length>0){
+            if(fresas>0){
                 textoPedido += `${fresas} Fresas, `;
             }
-            if(manzanas.length>0){
+            if(manzanas>0){
                 textoPedido += `${manzanas} Manzanas, `;
             }
-            if(arrozLeche.length>0){
+            if(arrozLeche>0){
                 textoPedido += `${arrozLeche} Arroz con leche, `;
             }
-            if(zarzamoras.length>0){
+            if(zarzamoras>0){
                 textoPedido += `${zarzamoras} Zarzamoras, `;
             }
             

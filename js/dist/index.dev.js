@@ -68,71 +68,71 @@ function cargarHTMLPedidos(pedidos, opc) {
           hora = pedido.hora;
       var textoPedido = '';
 
-      if (pollo.length > 0) {
+      if (pollo > 0) {
         textoPedido += "".concat(pollo, " Pollo ").concat(saborPollo, ", ");
       }
 
-      if (costilla.length > 0) {
+      if (costilla > 0) {
         textoPedido += "".concat(costilla, " Costilla ").concat(saborCostilla, ", ");
       }
 
-      if (sopa.length > 0) {
+      if (sopa > 0) {
         textoPedido += "".concat(sopa, " Sopa, ");
       }
 
-      if (rusa.length > 0) {
+      if (rusa > 0) {
         textoPedido += "".concat(rusa, " Rusa, ");
       }
 
-      if (arroz.length > 0) {
+      if (arroz > 0) {
         textoPedido += "".concat(arroz, " Arroz, ");
       }
 
-      if (verde.length > 0) {
+      if (verde > 0) {
         textoPedido += "".concat(verde, " Verde, ");
       }
 
-      if (pure.length > 0) {
+      if (pure > 0) {
         textoPedido += "".concat(pure, " Pure, ");
       }
 
-      if (francesa.length > 0) {
+      if (francesa > 0) {
         textoPedido += "".concat(francesa, " Francesa, ");
       }
 
-      if (reja.length > 0) {
+      if (reja > 0) {
         textoPedido += "".concat(reja, " Reja, ");
       }
 
-      if (papasBolsa.length > 0) {
+      if (papasBolsa > 0) {
         textoPedido += "".concat(papasBolsa, " Chips, ");
       }
 
-      if (espagueti.length > 0) {
+      if (espagueti > 0) {
         textoPedido += "".concat(espagueti, " Espaqueti, ");
       }
 
-      if (frijoles.length > 0) {
+      if (frijoles > 0) {
         textoPedido += "".concat(frijoles, " Frijoles, ");
       }
 
-      if (nuggets.length > 0) {
+      if (nuggets > 0) {
         textoPedido += "".concat(frijoles, " Nuggets, ");
       }
 
-      if (fresas.length > 0) {
+      if (fresas > 0) {
         textoPedido += "".concat(fresas, " Fresas, ");
       }
 
-      if (manzanas.length > 0) {
+      if (manzanas > 0) {
         textoPedido += "".concat(manzanas, " Manzanas, ");
       }
 
-      if (arrozLeche.length > 0) {
+      if (arrozLeche > 0) {
         textoPedido += "".concat(arrozLeche, " Arroz con leche, ");
       }
 
-      if (zarzamoras.length > 0) {
+      if (zarzamoras > 0) {
         textoPedido += "".concat(zarzamoras, " Zarzamoras, ");
       }
 
@@ -193,71 +193,71 @@ function cargarHTMLPedidosBorrados(pedidosBorrados) {
           hora = pedidoBorrado.hora;
       var textoPedido = '';
 
-      if (pollo.length > 0) {
+      if (pollo > 0) {
         textoPedido += "".concat(pollo, " Pollo ").concat(saborPollo, ", ");
       }
 
-      if (costilla.length > 0) {
+      if (costilla > 0) {
         textoPedido += "".concat(costilla, " Costilla ").concat(saborCostilla, ", ");
       }
 
-      if (sopa.length > 0) {
+      if (sopa > 0) {
         textoPedido += "".concat(sopa, " Sopa, ");
       }
 
-      if (rusa.length > 0) {
+      if (rusa > 0) {
         textoPedido += "".concat(rusa, " Rusa, ");
       }
 
-      if (arroz.length > 0) {
+      if (arroz > 0) {
         textoPedido += "".concat(arroz, " Arroz, ");
       }
 
-      if (verde.length > 0) {
+      if (verde > 0) {
         textoPedido += "".concat(verde, " Verde, ");
       }
 
-      if (pure.length > 0) {
+      if (pure > 0) {
         textoPedido += "".concat(pure, " Pure, ");
       }
 
-      if (francesa.length > 0) {
+      if (francesa > 0) {
         textoPedido += "".concat(francesa, " Francesa, ");
       }
 
-      if (reja.length > 0) {
+      if (reja > 0) {
         textoPedido += "".concat(reja, " Reja, ");
       }
 
-      if (papasBolsa.length > 0) {
+      if (papasBolsa > 0) {
         textoPedido += "".concat(papasBolsa, " Chips, ");
       }
 
-      if (espagueti.length > 0) {
+      if (espagueti > 0) {
         textoPedido += "".concat(espagueti, " Espaqueti, ");
       }
 
-      if (frijoles.length > 0) {
+      if (frijoles > 0) {
         textoPedido += "".concat(frijoles, " Frijoles, ");
       }
 
-      if (nuggets.length > 0) {
+      if (nuggets > 0) {
         textoPedido += "".concat(frijoles, " Nuggets, ");
       }
 
-      if (fresas.length > 0) {
+      if (fresas > 0) {
         textoPedido += "".concat(fresas, " Fresas, ");
       }
 
-      if (manzanas.length > 0) {
+      if (manzanas > 0) {
         textoPedido += "".concat(manzanas, " Manzanas, ");
       }
 
-      if (arrozLeche.length > 0) {
+      if (arrozLeche > 0) {
         textoPedido += "".concat(arrozLeche, " Arroz con leche, ");
       }
 
-      if (zarzamoras.length > 0) {
+      if (zarzamoras > 0) {
         textoPedido += "".concat(zarzamoras, " Zarzamoras, ");
       }
 

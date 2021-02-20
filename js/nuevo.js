@@ -21,7 +21,8 @@ const zarzamorasInput = document.querySelector("#zarzamoras");
 //datos del cliente
 const nombreInput = document.querySelector("#nombre");
 const horaInput = document.querySelector("#hora");
-
+// contenedores cantidad para añadir funcionalidad a los botones add y sub
+const contenedoresCantidad = document.querySelectorAll(".cantidad");
 //contenedor para los pedidos
 const contenedorPedidos = document.querySelector("#contenedor_pedidos");
 
@@ -32,17 +33,45 @@ const formulario = document.querySelector('#nuevoPedido')
 //variable para los pedidos
 let pedidos = [];
 
+
 // Eventos
 eventListeners();
 function eventListeners() {
-    
     formulario.addEventListener('submit', agregarPedido);
     // Cargar los pedidos del local storage, en caso de que no existan, entonces empieza el arreglo vacio
     document.addEventListener('DOMContentLoaded', () => {
         pedidos = JSON.parse( localStorage.getItem('pedidos') ) || []  ;
         console.log(pedidos);
     });
-    
+    for ( let i=0;i<contenedoresCantidad.length; i++ ){
+        if(i<2) {
+            contenedoresCantidad[i].children[0].addEventListener('click',(e)=>{
+                e.preventDefault();
+                const input = contenedoresCantidad[i].children[1];
+                if( parseFloat(input.value) > 0 ){
+                    input.value = parseFloat(input.value) - 0.5;
+                }
+            });
+            contenedoresCantidad[i].children[2].addEventListener('click',(e)=>{
+                e.preventDefault();
+                const input = contenedoresCantidad[i].children[1];
+                input.value = parseFloat(input.value) + 0.5;
+            });
+        }else {
+            contenedoresCantidad[i].children[0].addEventListener('click',(e)=>{
+                e.preventDefault();
+                const input = contenedoresCantidad[i].children[1];
+                if( parseFloat(input.value) > 0 ){
+                    input.value = parseInt(input.value) - 1;
+                }
+            });
+            contenedoresCantidad[i].children[2].addEventListener('click',(e)=>{
+                e.preventDefault();
+                const input = contenedoresCantidad[i].children[1];
+                input.value = parseInt(input.value) + 1;
+            });
+        }
+    }
 }
 
 

@@ -40,7 +40,7 @@ main {
 }
 h2 {
     font-weight: normal;
-    font-size: 1.4rem;
+    font-size: 1.8rem;
     text-align: center;
 }
 .cantidad{
@@ -49,7 +49,6 @@ h2 {
 .cantidad input {
     border: none;
     height: 20px;
-    width: 100%;
 }
 span {
     text-transform: capitalize;
@@ -182,6 +181,192 @@ main {
     width: 100%;
     height: 100%;
 }
+
+.comida,
+.complementos,
+.postres,
+.cliente {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 20px;
+}
+
+.comida__seccion > label,
+.complementos__seccion > label,
+.postres__seccion > label {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.comida__seccion > label > span,
+.complementos__seccion > label > span,
+.postres__seccion > label > span {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+}
+.cantidad {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5px;
+}
+.cantidad .sub,
+.cantidad .add {
+    padding: 5px 10px;
+}
+.comida__seccion > label > .cantidad > input,
+.complementos__seccion > label > .cantidad > input,
+.postres__seccion > label > .cantidad > input  {
+    height: 27px;
+    width: 50px;
+    margin: 0 5px;
+    border: 1px solid black;
+    text-align: center;
+}
+.sabor {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+}
+.sabor > span {
+    font-size: 1.2rem;
+}
+.sabor > input {
+    width: 100%;
+}
+
+.complementos,
+.postres {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+}
+.cliente {
+    flex-direction: column;
+    justify-content: center;
+}
+.nombre {
+    margin-bottom: 10px;
+}
+.cliente > div > label {
+    display: flex;
+}
+.cliente > div > label > span {
+    font-size: 1.6rem;
+}
+.cliente > div > label > input {
+    width: 100%;
+    margin-left: 10px;
+}
+.boton_add {
+    background-color: white;
+    border: none;
+    align-self: center;
+    width: 100%;
+    padding: 7px 0;
+    border-radius: 100px;
+    margin-bottom: 10px;
+    font-weight: 400;
+    font-size: 1.2rem;
+} 
+
+/* contar */
+.seccion {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.seccion input {
+    width: 80%;
+    height: 20px;
+    border: none;
+    text-align: center;
+}
+.seccion span {
+    font-weight: 300;
+    font-size: 1.2rem;
+}
+
+.contar {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6,auto);
+}
+main > .comida {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    margin-bottom: 10px;
+    height: auto;
+}
+
+main > .complementos {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(4,1fr);
+    margin-bottom: 10px;
+    height: auto;
+}
+main > .postres {
+    display: grid;
+    grid-template-rows: repeat(2,1fr);
+    grid-template-columns: repeat(2,1fr);
+    margin-bottom: 30px;
+    height: auto;
+}
+.regresar {
+    width: 100%;
+    text-align: center;
+    background-color: white;
+    padding: 7px 0;
+    border-radius: 100px;
+    text-decoration: none;
+    color: black;
+    font-weight: 400;
+    font-size: 1.2rem;
+    border: none;
+}
+.regresar:focus {
+    outline: none;
+}
+.contenedor_boton{
+    grid-column-start: 0;
+    grid-column-end: 0;
+    grid-row-start: 6;
+    grid-row-end: 7;
+}
+
+
+
+
+/*
+.header_secundario {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0 10px 0;
+}
+.header_secundario #logo {
+    width: 20%;
+}
+.header_secundario .titulo {
+    width: 200px;
+}
+main {
+    width: auto;
+    height: auto;
+    margin: 0 20px;
+}
+#nuevoPedido,
+.comida,
+.comida__seccion {
+    width: 100%;
+    height: 100%;
+}
 .comida__seccion label {
     display: flex;
     flex-direction: column;
@@ -192,7 +377,10 @@ main {
     font-size: 1.2rem;
     margin-bottom: 10px;
 }
-.comida__seccion .cantidad,
+.comida__seccion .cantidad {
+    display: flex;
+}
+comida__seccion .cantidad,
 .comida__seccion .cantidad input {
     width: 100%;
 }
@@ -207,7 +395,7 @@ main {
     font-weight: 200;
 }
 /* Complementos y postres */
-.complementos,
+/* .complementos,
 .postres,
 .cliente {
     display: flex;
@@ -263,342 +451,4 @@ main {
     margin-bottom: 10px;
     font-weight: 400;
     font-size: 1.2rem;
-}
-
-/* contar */
-.seccion {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-}
-.seccion input {
-    width: 80%;
-    height: 20px;
-    border: none;
-    text-align: center;
-}
-.seccion span {
-    font-weight: 300;
-    font-size: 1.2rem;
-}
-
-.contar {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(6,auto);
-
-}
-.contar .comida {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    margin-bottom: 10px;
-}
-
-main > .complementos {
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    grid-template-rows: repeat(4,1fr);
-    margin-top: 10px;
-}
-main > .postres {
-    display: grid;
-    grid-template-rows: repeat(2,1fr);
-    grid-template-columns: repeat(2,1fr);
-    margin: 10px 0;
-}
-.regresar {
-    width: 100%;
-    text-align: center;
-    background-color: white;
-    padding: 7px 0;
-    border-radius: 100px;
-    text-decoration: none;
-    color: black;
-    font-weight: 400;
-    font-size: 1.2rem;
-    border: none;
-}
-.regresar:focus {
-    outline: none;
-}
-.contenedor_boton{
-    grid-column-start: 0;
-    grid-column-end: 0;
-    grid-row-start: 6;
-    grid-row-end: 7;
-}
-
-
-
-/* background: linear-gradient(180deg, #FD8000 0%, #FECD00 100%), #FFFFFF;
-
-a {
-    text-decoration: none;
-    color: black;
-}
-h1 {
-    font-size: 1.8rem;
-}
-h2 {
-    font-size: 1.6rem;
-}
-span {
-    text-transform: capitalize;
-}
-header {
-    display: flex;
-    width: 100%;
-    height: auto;
-    justify-content: space-around;
-    align-items: center;
-    padding: 10px 10px;
-}
-header ul {
-    display: flex;
-    width: 100%;
-    justify-content: right;
-    align-items: center;
-    list-style: none;
-}
-header ul li {
-    margin-right: 20px;
-}
-.contar {
-    font-size: 1.8rem;
-}
-.nuevo {
-    font-size: 2.4rem;
-    font-weight: bold;
-}
-hr {
-    margin: 10px 0;
-}
-
-.titulo {
-    width: 100%;
-    height: auto;
-    margin-bottom: 10px;
-}
-.titulo ul {
-    display: grid;
-    grid-template-columns: 1fr 3fr 6fr;
-    
-}
-.titulo ul li {
-    font-size: 1.4rem;
-    margin: 0 10px;
-    list-style: none;
-}
-
-.pedido {
-    width: 100%;
-    height: auto;
-    margin-bottom: 15px;
-}
-.pedido ul {
-    display: grid;
-    grid-template-columns: 1fr 2fr 6fr 1fr;
-}
-.pedido ul li {
-    font-size: 1.4rem;
-    margin: 0 10px;
-    list-style: none;
-}
-.borrar-pedido{
-    align-self: center;
-    justify-self: center;
-    cursor: pointer;
-    color: red;
-    font-weight: bold;
-}
-
-
-
-/* nuevo.html */
-
-/* 
-
-
-form {
-    width: 100%;
-    height: auto;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-}
-
-
-.comida{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-}
-.comida .comida__seccion {
-    width: 100%;
-}
-.comida .comida__seccion label {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-.comida .comida__seccion label span {
-    font-size: 1.6rem;
-    margin-bottom: 10px;
-    font-weight: bold;
-}
-.comida .comida__seccion label .cantidad {
-    margin-bottom: 10px;
-}
-.comida .comida__seccion label .sabor {
-    margin-bottom: 10px;
-}
-
-
-.complementos {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-}
-.complementos h2 {
-    margin-top: 20px;
-    margin-bottom: 10px;
-}
-.complementos .complementos__seccion {
-    width: 100%;
-}
-.complementos .complementos__seccion label {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.complementos .complementos__seccion label span {
-    font-size: 1.4rem;
-    margin-bottom: 10px;
-}
-
-
-.postres {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-}
-.postres h2 {
-    margin-top: 20px;
-    margin-bottom: 10px;
-}
-.postres .postres__seccion {
-    width: 100%;
-}
-.postres .postres__seccion label {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.postres .postres__seccion label span {
-    font-size: 1.4rem;
-    margin-bottom: 10px;
-}
-
-.cliente {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-}
-.cliente h2 {
-    margin: 10px 0px;
-}
-.cliente div {
-    width: 100%;
-    margin-bottom: 10px;
-}
-.cliente .nombre label{
-    display: flex;
-    align-items: center;
-}
-.cliente .nombre label span {
-    font-size: 1.4rem;
-    margin: 0 10px
-}
-.cliente .nombre label input {
-    width: 100%;
-    margin-right: 20px;
-}
-
-.cliente .hora label{
-    display: flex;
-    align-items: center;
-}
-.cliente .hora label span {
-    font-size: 1.4rem;
-    margin: 0 10px
-}
-.cliente .hora label input {
-    width: 100%;
-    margin-right: 20px;
-}
-
-.boton_add { 
-    width: 90%;
-    align-self: center;
-    justify-self: center;
-    margin-bottom: 10px;
-    font-family: 'Roboto', sans-serif;
-    border: 1px solid black;
-    border-radius: 100px;
-    background-color: white;
-    padding: 10px 0px;
-    font-size: 1.4rem;
-    color: black;
-}
-.boton_add:hover {
-    cursor: pointer;
-}
-/* Contar */
-
-/* 
-
-.contar {
-    display: flex;
-    flex-direction: column;
-}
-.contar .seccion {
-    display: flex;
-    width: 100%;
-    margin-bottom: 5px;
-    padding-right: 15px;
-
-}
-.contar .seccion span {
-    margin: 0px 10px;
-}
-.contar .seccion input {
-    width: 100%;
-}
-
-.contar .regresar {
-    border: 1px solid black;
-    text-align: center;
-    width: 90%;
-    margin: 5px auto;
-    padding: 10px 0px;
-    border-radius: 100px;
-    font-size: 1.4rem;
-    font-weight: normal;
-} */
+} */ 

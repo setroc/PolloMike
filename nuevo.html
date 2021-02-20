@@ -27,7 +27,9 @@
                     <label for="pollo">
                         <span>Pollo</span>
                         <div class="cantidad">
-                            <input type="number" name="pollo" id="pollo" step="0.5" min="0">
+                            <button class="sub">-</button>
+                            <input type="number" name="pollo" id="pollo" step="0.5" min="0" value="0">
+                            <button class="add">+</button>
                         </div>
                         <div class="sabor">
                             <input type="checkbox" name="sabor_pollo" id="naturalP">
@@ -48,7 +50,9 @@
                     <label for="costilla">
                         <span>Costilla</span>
                         <div class="cantidad">
-                            <input type="number" name="costilla" id="costilla" step="0.5" min="0">
+                            <button class="sub">-</button>
+                            <input type="number" name="costilla" id="costilla" step="0.5" min="0" value="0">
+                            <button class="add">+</button>
                         </div>
                         <div class="sabor">
                             <input type="checkbox" name="sabor_pollo" id="naturalC">
@@ -67,14 +71,15 @@
 
             </section>
 
+            <h2>Complementos</h2>
             <section class="complementos">
-                <h2>Complementos</h2>
-                
                 <div class="complementos__seccion">
                     <label for="sopa">
                         <span>Sopa</span>
                         <div class="cantidad">
-                            <input type="number" name="sopa" id="sopa" min="0">
+                            <button class="sub">-</button>
+                            <input value="0" type="number" name="sopa" id="sopa" min="0">
+                            <button class="add">+</button>
                         </div>
                     </label>
                 </div>
@@ -82,7 +87,9 @@
                     <label for="rusa">
                         <span>Rusa</span>
                         <div class="cantidad">
-                            <input type="number" name="rusa" id="rusa" min="0">
+                            <button class="sub">-</button>
+                            <input value="0" type="number" name="rusa" id="rusa" min="0">
+                            <button class="add">+</button>
                         </div>
                     </label>
                 </div>
@@ -90,7 +97,9 @@
                     <label for="arroz">
                         <span>Arroz</span>
                         <div class="cantidad">
-                            <input type="number" name="arroz" id="arroz" min="0">
+                            <button class="sub">-</button>
+                            <input value="0" type="number" name="arroz" id="arroz" min="0">
+                            <button class="add">+</button>
                         </div>
                     </label>
                 </div>
@@ -98,7 +107,9 @@
                     <label for="verde">
                         <span>Verde</span>
                         <div class="cantidad">
-                            <input type="number" name="verde" id="verde" min="0">
+                            <button class="sub">-</button>
+                            <input value="0" type="number" name="verde" id="verde" min="0">
+                            <button class="add">+</button>
                         </div>
                     </label>
                 </div>
@@ -106,7 +117,9 @@
                     <label for="pure">
                         <span>Pure</span>
                         <div class="cantidad">
-                            <input type="number" name="pure" id="pure" min="0">
+                            <button class="sub">-</button>
+                            <input value="0" type="number" name="pure" id="pure" min="0">
+                            <button class="add">+</button>
                         </div>
                     </label>
                 </div>
@@ -114,7 +127,9 @@
                     <label for="francesa">
                         <span>Francesa</span>
                         <div class="cantidad">
-                            <input type="number" name="francesa" id="francesa" min="0">
+                            <button class="sub">-</button>
+                            <input value="0" type="number" name="francesa" id="francesa" min="0">
+                            <button class="add">+</button>
                         </div>
                     </label>
                 </div>
@@ -122,7 +137,9 @@
                     <label for="reja">
                         <span>Reja</span>
                         <div class="cantidad">
-                            <input type="number" name="reja" id="reja" min="0">
+                            <button class="sub">-</button>
+                            <input value="0" type="number" name="reja" id="reja" min="0">
+                            <button class="add">+</button>
                         </div>
                     </label>
                 </div>
@@ -130,7 +147,9 @@
                     <label for="papasbolsa">
                         <span>Papas de bolsa</span>
                         <div class="cantidad">
-                            <input type="number" name="papasBolsa" id="papasbolsa" min="0">
+                            <button class="sub">-</button>
+                            <input value="0" type="number" name="papasBolsa" id="papasbolsa" min="0">
+                            <button class="add">+</button>
                         </div>
                     </label>
                 </div>
@@ -138,7 +157,9 @@
                     <label for="espagueti">
                         <span>Espagueti</span>
                         <div class="cantidad">
-                            <input type="number" name="espagueti" id="espagueti" min="0">
+                            <button class="sub">-</button>
+                            <input value="0" type="number" name="espagueti" id="espagueti" min="0">
+                            <button class="add">+</button>
                         </div>
                     </label>
                 </div>
@@ -146,29 +167,35 @@
                     <label for="frijoles">
                         <span>Frijoles</span>
                         <div class="cantidad">
-                            <input type="number" name="frijoles" id="frijoles" min="0">
+                            <button class="sub">-</button>
+                            <input value="0" type="number" name="frijoles" id="frijoles" min="0">
+                            <button class="add">+</button>
                         </div>
                     </label>
                 </div>
                 <div class="complementos__seccion">
                     <label for="nuggets">
                         <span>Nuggets</span>
-                        <div class="cantidad">
-                            <input type="number" name="nuggets" id="nuggets" min="0">
+                        <div class="cantidad">                            
+                            <button class="sub">-</button>
+                            <input value="0" type="number" name="nuggets" id="nuggets" min="0">
+                            <button class="add">+</button>
                         </div>
                     </label>
                 </div>
                 
             </section>
 
+            <h2>Postres</h2>
             <section class="postres">
-                <h2>Postres</h2>
                 
                 <div class="postres__seccion">
                     <label for="fresas">
                         <span>Fresas</span>
                         <div class="cantidad">
-                            <input type="number" name="fresas" id="fresas" min="0">
+                            <button class="sub">-</button>
+                            <input value="0" type="number" name="fresas" id="fresas" min="0">
+                            <button class="add">+</button>
                         </div>
                     </label>
                 </div>
@@ -176,7 +203,9 @@
                     <label for="manzanas">
                         <span>Manzanas</span>
                         <div class="cantidad">
-                            <input type="number" name="manzanas" id="manzanas" min="0">
+                            <button class="sub">-</button>
+                            <input value="0" type="number" name="manzanas" id="manzanas" min="0">
+                            <button class="add">+</button>
                         </div>
                     </label>
                 </div>
@@ -184,7 +213,9 @@
                     <label for="arrozleche">
                         <span>Arroz con leche</span>
                         <div class="cantidad">
-                            <input type="number" name="arrozLeche" id="arrozleche" min="0">
+                            <button class="sub">-</button>
+                            <input value="0" type="number" name="arrozLeche" id="arrozleche" min="0">
+                            <button class="add">+</button>
                         </div>
                     </label>
                 </div>
@@ -192,15 +223,17 @@
                     <label for="zarzamoras">
                         <span>Zarzamoras</span>
                         <div class="cantidad">
-                            <input type="number" name="zarzamoras" id="zarzamoras" min="0">
+                            <button class="sub">-</button>
+                            <input value="0" type="number" name="zarzamoras" id="zarzamoras" min="0">
+                            <button class="add">+</button>
                         </div>
                     </label>
                 </div>
                 
             </section>
 
+            <h2>Datos del cliente</h2>
             <section class="cliente">
-                <h2>Datos del cliente</h2>
                 <div class="nombre">
                     <label for="nombre">
                         <span>Nombre</span>

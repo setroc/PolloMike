@@ -30,7 +30,9 @@ var arrozLecheInput = document.querySelector("#arrozleche");
 var zarzamorasInput = document.querySelector("#zarzamoras"); //datos del cliente
 
 var nombreInput = document.querySelector("#nombre");
-var horaInput = document.querySelector("#hora"); //contenedor para los pedidos
+var horaInput = document.querySelector("#hora"); // contenedores cantidad para añadir funcionalidad a los botones add y sub
+
+var contenedoresCantidad = document.querySelectorAll(".cantidad"); //contenedor para los pedidos
 
 var contenedorPedidos = document.querySelector("#contenedor_pedidos"); // Formulario nuevo pedido
 
@@ -47,6 +49,42 @@ function eventListeners() {
     pedidos = JSON.parse(localStorage.getItem('pedidos')) || [];
     console.log(pedidos);
   });
+
+  var _loop = function _loop(i) {
+    if (i < 2) {
+      contenedoresCantidad[i].children[0].addEventListener('click', function (e) {
+        e.preventDefault();
+        var input = contenedoresCantidad[i].children[1];
+
+        if (parseFloat(input.value) > 0) {
+          input.value = parseFloat(input.value) - 0.5;
+        }
+      });
+      contenedoresCantidad[i].children[2].addEventListener('click', function (e) {
+        e.preventDefault();
+        var input = contenedoresCantidad[i].children[1];
+        input.value = parseFloat(input.value) + 0.5;
+      });
+    } else {
+      contenedoresCantidad[i].children[0].addEventListener('click', function (e) {
+        e.preventDefault();
+        var input = contenedoresCantidad[i].children[1];
+
+        if (parseFloat(input.value) > 0) {
+          input.value = parseInt(input.value) - 1;
+        }
+      });
+      contenedoresCantidad[i].children[2].addEventListener('click', function (e) {
+        e.preventDefault();
+        var input = contenedoresCantidad[i].children[1];
+        input.value = parseInt(input.value) + 1;
+      });
+    }
+  };
+
+  for (var i = 0; i < contenedoresCantidad.length; i++) {
+    _loop(i);
+  }
 }
 
 function agregarPedido(e) {
